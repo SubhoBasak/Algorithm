@@ -1,4 +1,3 @@
-# this radix sort is only for integer sorting
 class queue:
     def __init__(self):
         self.__items = []
@@ -35,7 +34,7 @@ def radix_sort(lst):
         if len(lst[i])<mx_d:
             lst[i] = ((mx_d-len(lst[i]))*'0')+lst[i]
     for i in range(mx_d):
-        for j, k in enumerate(lst):
+        for j, k in enumerate(lst[::-1]):
             l = k[(mx_d-1-i)]
             if l == '0':
                 buc0.enqueue(lst[j])
