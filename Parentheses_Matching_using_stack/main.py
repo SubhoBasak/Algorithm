@@ -2,7 +2,7 @@ import stack
 stk = stack.stack()
 
 def match(st):
-    for i, j in enumerate(st):
+    for j in st:
         if j == '(':
             stk.push(1)
         elif j == ')':
